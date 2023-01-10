@@ -26,20 +26,26 @@ class FoodsStateNotifer extends StateNotifier<FoodsState> {
       Food(
         id: '1',
         name: 'Meat plate',
-        description: 'This is meat plate.',
+        description:
+            'This is meat plate. Lorem ipsum dolor sit amet. Et distinctio libero aut commodi labore qui quia possimus. Ut repudiandae quia 33 quisquam enim aut vitae tenetur eos doloribus voluptatum quo nihil debitis sed maxime.',
         image: 'assets/image/meat.jpg',
+        price: 19.45,
       ),
       Food(
         id: '2',
         name: 'Salad bowl',
-        description: 'This is salad bowl.',
+        description:
+            'This is salad bowl. Ut amet aliquid ab veritatis quasi sed doloribus error ut laudantium reiciendis. Ab quas libero est fugit dolores et omnis suscipit. In debitis consectetur aut porro.',
         image: 'assets/image/salad.jpg',
+        price: 8.75,
       ),
       Food(
         id: '3',
         name: 'Stew',
-        description: 'This is stew.',
+        description:
+            'This is stew. Et odit magni ut excepturi distinctio rem reiciendis consequatur est velit enim qui perferendis optio ut perspiciatis quaerat qui quam fugit. Nam ipsum quibusdam aut impedit assumenda aut ipsum nostrum.',
         image: 'assets/image/stew.jpg',
+        price: 12.98,
       ),
     ];
 

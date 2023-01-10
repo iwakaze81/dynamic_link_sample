@@ -24,6 +24,7 @@ mixin _$Food {
   String get name => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
+  double get price => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +36,8 @@ abstract class $FoodCopyWith<$Res> {
   factory $FoodCopyWith(Food value, $Res Function(Food) then) =
       _$FoodCopyWithImpl<$Res, Food>;
   @useResult
-  $Res call({String id, String name, String description, String image});
+  $Res call(
+      {String id, String name, String description, String image, double price});
 }
 
 /// @nodoc
@@ -55,6 +57,7 @@ class _$FoodCopyWithImpl<$Res, $Val extends Food>
     Object? name = null,
     Object? description = null,
     Object? image = null,
+    Object? price = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -73,6 +76,10 @@ class _$FoodCopyWithImpl<$Res, $Val extends Food>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -83,7 +90,8 @@ abstract class _$$_FoodCopyWith<$Res> implements $FoodCopyWith<$Res> {
       __$$_FoodCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name, String description, String image});
+  $Res call(
+      {String id, String name, String description, String image, double price});
 }
 
 /// @nodoc
@@ -99,6 +107,7 @@ class __$$_FoodCopyWithImpl<$Res> extends _$FoodCopyWithImpl<$Res, _$_Food>
     Object? name = null,
     Object? description = null,
     Object? image = null,
+    Object? price = null,
   }) {
     return _then(_$_Food(
       id: null == id
@@ -117,6 +126,10 @@ class __$$_FoodCopyWithImpl<$Res> extends _$FoodCopyWithImpl<$Res, _$_Food>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
+      price: null == price
+          ? _value.price
+          : price // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -128,7 +141,8 @@ class _$_Food implements _Food {
       {required this.id,
       required this.name,
       required this.description,
-      required this.image});
+      required this.image,
+      required this.price});
 
   factory _$_Food.fromJson(Map<String, dynamic> json) => _$$_FoodFromJson(json);
 
@@ -140,10 +154,12 @@ class _$_Food implements _Food {
   final String description;
   @override
   final String image;
+  @override
+  final double price;
 
   @override
   String toString() {
-    return 'Food(id: $id, name: $name, description: $description, image: $image)';
+    return 'Food(id: $id, name: $name, description: $description, image: $image, price: $price)';
   }
 
   @override
@@ -155,12 +171,14 @@ class _$_Food implements _Food {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.image, image) || other.image == image));
+            (identical(other.image, image) || other.image == image) &&
+            (identical(other.price, price) || other.price == price));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name, description, image);
+  int get hashCode =>
+      Object.hash(runtimeType, id, name, description, image, price);
 
   @JsonKey(ignore: true)
   @override
@@ -181,7 +199,8 @@ abstract class _Food implements Food {
       {required final String id,
       required final String name,
       required final String description,
-      required final String image}) = _$_Food;
+      required final String image,
+      required final double price}) = _$_Food;
 
   factory _Food.fromJson(Map<String, dynamic> json) = _$_Food.fromJson;
 
@@ -193,6 +212,8 @@ abstract class _Food implements Food {
   String get description;
   @override
   String get image;
+  @override
+  double get price;
   @override
   @JsonKey(ignore: true)
   _$$_FoodCopyWith<_$_Food> get copyWith => throw _privateConstructorUsedError;

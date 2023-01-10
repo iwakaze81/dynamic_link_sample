@@ -40,11 +40,20 @@ class FoodCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(food.name,
-                        style: Theme.of(context).textTheme.titleLarge),
                     Text(
-                      food.description,
-                      style: Theme.of(context).textTheme.bodyMedium,
+                      food.name,
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    Text(
+                      '\$ ${food.price}',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                    Flexible(
+                      child: Text(
+                        food.description,
+                        style: Theme.of(context).textTheme.bodyMedium,
+                        overflow: TextOverflow.fade,
+                      ),
                     ),
                   ],
                 )),

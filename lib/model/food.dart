@@ -10,6 +10,7 @@ abstract class Food with _$Food {
     required String name,
     required String description,
     required String image,
+    required double price,
   }) = _Food;
 
   factory Food.fromJson(Map<String, dynamic> json) => _$FoodFromJson(json);

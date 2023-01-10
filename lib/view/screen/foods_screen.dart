@@ -9,11 +9,14 @@ class FoodsScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final foods = ref.watch(foodsProvider).foods;
-
+    final padding = MediaQuery.of(context).padding;
     return Scaffold(
-      body: SafeArea(
+      body: Container(
         child: AnimatedList(
-          padding: const EdgeInsets.all(4),
+          padding: const EdgeInsets.all(4).copyWith(
+            top: padding.top,
+            bottom: padding.bottom,
+          ),
           initialItemCount: foods.length,
           itemBuilder: (context, index, animation) {
             return Container(
