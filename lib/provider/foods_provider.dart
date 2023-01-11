@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 part 'foods_provider.freezed.dart';
 
 final foodsProvider = StateNotifierProvider<FoodsStateNotifer, FoodsState>(
-    (ref) => FoodsStateNotifer(ref));
+    (_) => FoodsStateNotifer());
 
 @freezed
 class FoodsState with _$FoodsState {
@@ -15,11 +15,9 @@ class FoodsState with _$FoodsState {
 }
 
 class FoodsStateNotifer extends StateNotifier<FoodsState> {
-  FoodsStateNotifer(this._ref) : super(FoodsState()) {
+  FoodsStateNotifer() : super(FoodsState()) {
     fetch();
   }
-
-  final Ref _ref;
 
   Future<void> fetch() async {
     final foods = [

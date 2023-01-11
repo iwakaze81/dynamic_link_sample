@@ -19,14 +19,18 @@ class FoodCard extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: Container(
-              height: cardHeight,
-              margin: const EdgeInsets.symmetric(vertical: 6).copyWith(left: 6),
-              child: ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(24)),
-                child: Image.asset(
-                  food.image,
-                  fit: BoxFit.cover,
+            child: Hero(
+              tag: food.id,
+              child: Container(
+                height: cardHeight,
+                margin:
+                    const EdgeInsets.symmetric(vertical: 6).copyWith(left: 6),
+                child: ClipRRect(
+                  borderRadius: const BorderRadius.all(Radius.circular(24)),
+                  child: Image.asset(
+                    food.image,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
