@@ -1,4 +1,5 @@
 import 'package:dynamic_link_sample/provider/foods_provider.dart';
+import 'package:dynamic_link_sample/provider/share_provider.dart';
 import 'package:dynamic_link_sample/view/component/button/elevated_button.dart';
 import 'package:dynamic_link_sample/view/component/card/elevated_card.dart';
 import 'package:flutter/material.dart';
@@ -112,7 +113,9 @@ class FoodDetailScreen extends ConsumerWidget {
                   ),
                   ElevatedIconButton(
                     icon: Icons.share,
-                    onPressed: () {},
+                    onPressed: () async {
+                      await ref.read(shareProvider).shareFood(food, context);
+                    },
                   ),
                 ],
               ),
