@@ -45,6 +45,22 @@ class FoodsStateNotifer extends StateNotifier<FoodsState> {
         image: 'assets/image/stew.jpg',
         price: 12.98,
       ),
+      Food(
+        id: '4',
+        name: 'Hamburger',
+        description:
+            'This is Hamburger.  Eum asperiores eligendi sit labore rerum est consequatur doloremque qui sint repellat. Non laboriosam magni cum voluptatem ipsum hic voluptas laboriosam sed ipsam fugit et voluptatem voluptatum ut quia commodi.',
+        image: 'assets/image/hamburger.jpg',
+        price: 7.82,
+      ),
+      Food(
+        id: '5',
+        name: 'Pizza',
+        description:
+            'This is Hamburger. Eum asperiores eligendi sit labore rerum est consequatur doloremque qui sint repellat. Non laboriosam magni cum voluptatem ipsum hic voluptas laboriosam sed ipsam fugit et voluptatem voluptatum ut quia commodi.',
+        image: 'assets/image/pizza.jpg',
+        price: 16.45,
+      ),
     ];
 
     state = state.copyWith(foods: foods);

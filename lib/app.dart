@@ -16,6 +16,7 @@ class MyApp extends ConsumerWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: const Color(0xFFF40EA5),
+        primaryColor: const Color(0xFFF40EA5),
         textTheme: GoogleFonts.antonTextTheme(),
         cardTheme: CardTheme(
           shape: RoundedRectangleBorder(
